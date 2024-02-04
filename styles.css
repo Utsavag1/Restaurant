@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.2s;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+body{
+    min-width: screen
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(131, 202, 247);
+    font-weight: 600;
+    overflow:hidden;
+}
+
+main{
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    color: azure;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 3rem;
+    margin: 0 2vw;
+}
+
+.sections, 
+.cart{
+    display: flex;
+    align-items: center;
+}
+
+.sections a{
+    text-decoration: none;
+    margin: 0 2vw;
+    color: black;
+}
+
+.sections a:hover{
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.sections img{
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
+}
+
+.cart{
+    position: relative;
+}
+
+.item-count{
+    position: absolute;
+    top: -20%;
+    right: 20%;
+    background-color: greenyellow;
+    padding: 0 7%;
+    border-radius: 100%;
+    font-size: smaller;
+}
+
+section{
+    padding-top: 10vh;
+    height: 100vh;
+    background-color: rgb(188, 251, 251);
+    /* scroll-snap-align: start; */
+}
+
+.home{
+    background-image: url("pictures/home.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(52, 240, 174, 0.288);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 1%;
+}
+.content img{
+    height: 30vh;
+    width: 30wh;
+
+}
+.subtitle{
+    margin: 5%;
+    font-size: 1.1rem;
+}
+
+.content button{
+    background-color: black;
+    border: solid 1px rgb(140, 140, 140);
+    padding: 1.5% 4%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.content a{
+    text-decoration: none;
+    color: azure;
+}
+
+.content button:hover{
+    transform: scale(1.02);
+    border: none;
+    box-shadow: 0 0 5px white;
+}
+.themenu{
+    background-color:  rgb(188, 251, 251);
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+}
+.menu{
+    /* background-image: url("pictures/menu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#notification{
+    position: fixed;
+    top: 0;
+    background-color: rgb(67, 202, 26);
+    color: black;
+    z-index: 10;
+    padding: 1.5vh 5vw;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;
+    font-weight: bold;
+}
+
+@keyframes slideIn{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.menu-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.categories{
+    background-color:  rgba(12, 154, 97, 0.275);
+    margin: 10px;
+    height: 80vh;
+    padding: 5%;
+    border-radius: 10px;
+}
+.categories b{
+    color: black;
+}
+@media screen and (max-width: 1180px){
+    *{
+        font-size: 0.8rem;
+    }
+    .home{
+        overflow: hidden;
+    }
+    section .content{
+        width: 90%;
+        height: 60%;
+        overflow: hidden;
+    }
+    .content img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        
+    }
+    #menu{
+        padding-bottom: 10px;
+    }
+    
+    .home{
+        background-image: url("pictures/home.jpg");
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer{
+        height: 150vh;
+    }
+    .menu-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu{
+        height: 200vh;
+        width: 100vw;
+    }
+
+    .categories{
+        height: 85vh; 
+        margin: 8vh  10px;
+    }
+    .desc{
+        height: 70px;
+    }
+    .about{
+        height: 1000px;
+        width: 100%;
+    }
+    .backtotop{
+        align-items: top;
+    }
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin: 6.4% 0;
+    height: 20%;
+    background-color: #05272386;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.items img{
+    width: 35%;
+    object-fit: cover;
+}
+
+.desc{
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+}
+
+.add-btn{
+    padding: 0 2%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about{
+    /* background-image: url("pictures/abt.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about h3{
+    margin: 1%;
+    font-size: 1.5rem;
+}
+
+.context{
+    text-align:center;
+    font-size: large;
+    color: black;
+    line-height: 170%;
+    margin: 3%;
+    background-color: rgba(52, 240, 174, 0.288);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+footer{
+    background-color: rgb(131, 202, 247);
+    width: 100wh;
+}
+.copyright{
+    text-align: center;
+    font-size: large;
+    /* height: 10vh; */
+    padding: 4vh 0;
+    color: black;
+    box-sizing: border-box;
+}
+.social-icons{
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: black;
+    padding: 15px 10px;
+    font-size: larger;
+    margin-right: 10px;
+}
+.social-icons span{
+    color: black;
+    font-size: larger;
+    margin-left: 20px;
+}

@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    transition: 0.2s;
+}
+
+body{
+    /* background-image: url("pictures/cartimage.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+
+    height: 100vh;
+    padding: 2vh 2vw;
+}
+
+main{
+    height: 96vh;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1vh 3vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.table{
+    width: 50vw;
+}
+
+td, th{
+    padding: 0.5vh 1vw;
+    text-align: center;
+}
+
+td button{
+    color: black;
+    font-weight: 900;
+    border-radius: 3px;
+    border: none;
+    padding: 0.1vh 0.5vw;
+    cursor: pointer;
+}
+
+#change-qty{
+    padding: 0;
+    width: 1.5vw;
+    font-size: 17px;
+    text-align: center;
+}
+
+.finalprice{
+    display: flex;
+    justify-content: space-between;
+    width:40vw;
+}
+
+#checkout{
+    color: black;
+    font-weight: 700;
+    font-size: 1.02rem;
+    padding: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout:hover{
+    color: white;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+    transform: scale(1.05);
+    background-color: #0f0f0f;
+}
+@media screen and (max-width: 800px){
+
+    *{
+        font-size: 0.8rem;
+    }
+    main{
+        width: 90vw;
+        height: 90vh;
+        align-items: center;
+        margin-left: 2.5vw;
+        margin-top: 2.5vh;
+    }
+    .table{
+        width: 90vw;
+    }
+    .finalprice{
+        width: 80vw;
+    }
+}
